@@ -1,0 +1,65 @@
+import { Workflow, Gamepad2, Container, Brain, Users } from "lucide-react";
+
+export const featuredProjects = [
+  {
+    id: 1,
+    title: "AREA",
+    description: "Full-stack automation platform inspired by IFTTT. Connect services via APIs, manage OAuth authentication, and create powerful automation workflows with triggers and actions.",
+    tech: ["React", "Node.js", "OAuth", "Docker", "PostgreSQL", "REST API"],
+    link: "#",
+    image: "/projects/area.png",
+    icon: Workflow,
+    category: "Web",
+    year: "2025",
+    status: "Completed",
+  },
+  {
+    id: 2,
+    title: "R-Type",
+    description: "Real-time multiplayer game built with C++ featuring client-server architecture, network synchronization, and complex state management for smooth gameplay experience.",
+    tech: ["C++", "Network Programming", "UDP", "Client-Server", "Game Engine"],
+    link: "#",
+    image: "/projects/rtype.jpeg",
+    icon: Gamepad2,
+    category: "Game",
+    year: "2025",
+    status: "Completed",
+  },
+  {
+    id: 3,
+    title: "Whanos",
+    description: "Modern CI/CD platform with Docker containerization and automated deployment pipelines. Production-ready infrastructure for streamlined development workflows.",
+    tech: ["Docker", "CI/CD", "Jenkins", "Kubernetes", "DevOps", "Automation"],
+    link: "#",
+    image: "/projects/whanos.jpeg",
+    icon: Container,
+    category: "DevOps",
+    year: "2025",
+    status: "Completed",
+  },
+];
+
+export const otherProjects = [
+  {
+    id: 4,
+    title: "Gomoku AI",
+    description: "Intelligent game AI using decision algorithms and heuristics for optimal gameplay strategy.",
+    tech: ["Python", "AI", "Algorithms", "Heuristics"],
+    link: "#",
+    icon: Brain,
+    category: "AI",
+    year: "2025",
+    status: "Completed",
+  },
+  {
+    id: 5,
+    title: "Panoramix",
+    description: "Concurrent programming simulation demonstrating thread synchronization and resource management.",
+    tech: ["C", "Threads", "Concurrency", "System Programming"],
+    link: "#",
+    icon: Users,
+    category: "System",
+    year: "2025",
+    status: "Completed",
+  },
+];

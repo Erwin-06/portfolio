@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Configuration des couleurs : On force le sombre par défaut */
+:root {
+  --background: #0a0a0a; /* Noir profond */
+  --foreground: #ffffff; /* Blanc */
+}
+
+/* On garde ta config de thème Next.js pour les polices Geist */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Styles globaux */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  
+  /* Scroll fluide pour les liens d'ancrage */
+  scroll-behavior: smooth; 
+  /* Anti-aliasing pour que le texte soit net sur fond sombre */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optionnel : style de la barre de scroll pour faire propre */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
