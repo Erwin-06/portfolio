@@ -48,23 +48,23 @@ const categories = ["All", "Frontend", "Backend", "Tools", "Design"];
 
 export default function TechStack() {
   return (
-    <section className="py-20 px-6" id="stack">
+    <section className="py-16 sm:py-20 px-4 sm:px-6" id="stack">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: false }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Tech Stack</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Tech Stack</h2>
+          <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
@@ -88,18 +88,18 @@ export default function TechStack() {
                 scale: 1.05,
                 transition: { duration: 0.2 }
               }}
-              className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+              className="group relative bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer"
             >
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4">
                 <div 
-                  className="text-5xl transition-transform duration-300 group-hover:scale-110"
+                  className="text-3xl sm:text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-110"
                   style={{ color: tech.color }}
                 >
                   <tech.icon />
                 </div>
                 <div className="text-center">
-                  <h3 className="font-semibold text-white mb-1">{tech.name}</h3>
-                  <span className="text-xs text-gray-500">{tech.category}</span>
+                  <h3 className="font-semibold text-white text-xs sm:text-sm md:text-base mb-0.5 sm:mb-1">{tech.name}</h3>
+                  <span className="text-[10px] sm:text-xs text-gray-500">{tech.category}</span>
                 </div>
               </div>
               

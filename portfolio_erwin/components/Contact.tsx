@@ -18,22 +18,22 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: false }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Get In Touch</h2>
+          <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -41,11 +41,11 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-400 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-400 mb-2"
                 >
                   Name
                 </label>
@@ -56,7 +56,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition"
                   placeholder="Your name"
                   required
                 />
@@ -65,7 +65,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-400 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-400 mb-2"
                 >
                   Email
                 </label>
@@ -76,7 +76,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition"
                   placeholder="your.email@example.com"
                   required
                 />
@@ -85,7 +85,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-400 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-400 mb-2"
                 >
                   Message
                 </label>
@@ -96,7 +96,7 @@ export default function Contact() {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition resize-none"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition resize-none"
                   placeholder="Tell me about your project..."
                   required
                 />
@@ -104,9 +104,9 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition"
+                className="w-full flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition text-sm sm:text-base"
               >
-                <Send size={18} />
+                <Send size={16} className="sm:w-[18px] sm:h-[18px]" />
                 Send Message
               </button>
             </form>
@@ -120,51 +120,51 @@ export default function Contact() {
             viewport={{ once: false }}
             className="flex flex-col justify-center"
           >
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Let&apos;s Connect</h3>
-                <p className="text-gray-400 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Let&apos;s Connect</h3>
+                <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                   I&apos;m always open to discussing new projects, creative ideas,
                   or opportunities to be part of your visions.
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="text-blue-400" size={20} />
+              <div className="flex items-center gap-2 sm:gap-3 text-gray-400">
+                <Mail className="text-blue-400 flex-shrink-0" size={18} />
                 <a
                   href="mailto:olamehouhounsou@gmail.com"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition text-sm sm:text-base break-all"
                 >
                   olamehouhounsou@gmail.com
                 </a>
               </div>
 
               <div>
-                <h4 className="text-sm font-medium text-gray-400 mb-4">
+                <h4 className="text-xs sm:text-sm font-medium text-gray-400 mb-3 sm:mb-4">
                   Follow me on
                 </h4>
-                <div className="flex gap-4">
+                <div className="flex gap-3 sm:gap-4">
                   <a
                     href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-blue-500/50 transition"
+                    className="p-2.5 sm:p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-blue-500/50 transition"
                   >
-                    <Github size={20} />
+                    <Github size={18} className="sm:w-5 sm:h-5" />
                   </a>
                   <a
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-blue-500/50 transition"
+                    className="p-2.5 sm:p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-blue-500/50 transition"
                   >
-                    <Linkedin size={20} />
+                    <Linkedin size={18} className="sm:w-5 sm:h-5" />
                   </a>
                   <a
                     href="mailto:olamehouhounsou@gmail.com"
-                    className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-blue-500/50 transition"
+                    className="p-2.5 sm:p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-blue-500/50 transition"
                   >
-                    <Mail size={20} />
+                    <Mail size={18} className="sm:w-5 sm:h-5" />
                   </a>
                 </div>
               </div>

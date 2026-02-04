@@ -31,7 +31,7 @@ const experiences: WorkExperience[] = [
 
 export default function WorkExperience() {
   return (
-    <section id="work" className="py-20 px-6">
+    <section id="work" className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,11 +39,11 @@ export default function WorkExperience() {
           transition={{ duration: 0.5 }}
           viewport={{ once: false }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12">
             Work Experience
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -51,25 +51,25 @@ export default function WorkExperience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: false }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 transition"
+                className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/10 transition"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <Briefcase size={24} className="text-blue-400" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg flex-shrink-0">
+                    <Briefcase size={20} className="sm:w-6 sm:h-6 text-blue-400" />
                   </div>
 
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-1">{exp.company}</h3>
-                    <p className="text-red-400 font-medium mb-2">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-1 break-words">{exp.company}</h3>
+                    <p className="text-red-400 font-medium mb-2 text-sm sm:text-base">
                       {exp.position}
                     </p>
-                    <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">{exp.period}</p>
 
-                    <ul className="space-y-2 mb-4">
+                    <ul className="space-y-2 mb-3 sm:mb-4">
                       {exp.description.map((item, i) => (
-                        <li key={i} className="text-gray-400 flex items-start">
-                          <span className="text-blue-400 mr-2">•</span>
-                          {item}
+                        <li key={i} className="text-gray-400 text-sm sm:text-base flex items-start">
+                          <span className="text-blue-400 mr-2 flex-shrink-0">•</span>
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
